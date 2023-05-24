@@ -1,0 +1,228 @@
+[debug] [2023-05-16T03:26:15.766Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T03:26:15.767Z] Command:       /root/.nvm/versions/node/v18.16.0/bin/node /root/.nvm/versions/node/v18.16.0/bin/firebase deploy
+[debug] [2023-05-16T03:26:15.768Z] CLI Version:   12.0.0
+[debug] [2023-05-16T03:26:15.768Z] Platform:      linux
+[debug] [2023-05-16T03:26:15.768Z] Node Version:  v18.16.0
+[debug] [2023-05-16T03:26:15.769Z] Time:          Mon May 15 2023 20:26:15 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-05-16T03:26:15.769Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T03:26:15.828Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T03:26:15.829Z] > authorizing via signed-in user (info@habitkey.app)
+[debug] [2023-05-16T03:26:15.829Z] [iam] checking project hk-lite for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-16T03:26:15.830Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions [none]
+[debug] [2023-05-16T03:26:15.831Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions x-goog-quota-user=projects/hk-lite
+[debug] [2023-05-16T03:26:15.831Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-16T03:26:15.981Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions 200
+[debug] [2023-05-16T03:26:15.981Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-16T03:26:15.982Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite [none]
+[debug] [2023-05-16T03:26:16.180Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite 200
+[debug] [2023-05-16T03:26:16.180Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite {"projectId":"hk-lite","projectNumber":"699027761374","displayName":"hk-lite","name":"projects/hk-lite","resources":{"hostingSite":"hk-lite"},"state":"ACTIVE","etag":"1_e433af0c-3540-41a8-b67c-4f787e695584"}
+[info] 
+[info] === Deploying to 'hk-lite'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-16T03:26:16.185Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions [none]
+[debug] [2023-05-16T03:26:16.185Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-16T03:26:16.875Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions 200
+[debug] [2023-05-16T03:26:16.875Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions {"name":"projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[hk-lite]: beginning deploy... 
+[info] i  hosting[hk-lite]: found 6 files in public 
+[debug] [2023-05-16T03:26:16.880Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-16T03:26:16.887Z] [hosting] hash cache [cHVibGlj] stored for 6 files
+[debug] [2023-05-16T03:26:16.887Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1.3333333333333333,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":5}
+[debug] [2023-05-16T03:26:16.887Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff:populateFiles [none]
+[debug] [2023-05-16T03:26:16.887Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff:populateFiles {"files":{"/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/index.html":"ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9"}}
+[debug] [2023-05-16T03:26:17.329Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff:populateFiles 200
+[debug] [2023-05-16T03:26:17.329Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff:populateFiles {"uploadRequiredHashes":["ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/e2b11a93439e02ff/files"}
+[debug] [2023-05-16T03:26:17.329Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/e2b11a93439e02ff/files/ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9 [none]
+[debug] [2023-05-16T03:26:17.329Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/e2b11a93439e02ff/files/ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9 [stream]
+[debug] [2023-05-16T03:26:17.330Z] [hosting][populate queue][FINAL] {"max":443,"min":443,"avg":443,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":444}
+[debug] [2023-05-16T03:26:17.330Z] [hosting] uploads queued: 1
+[debug] [2023-05-16T03:26:18.244Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/e2b11a93439e02ff/files/ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9 200
+[debug] [2023-05-16T03:26:18.245Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/e2b11a93439e02ff/files/ae25650d1f07a645c5c5562593d4fd0cd51501159d74978ebe34b0b5a024a6b9 [stream]
+[debug] [2023-05-16T03:26:18.245Z] [hosting][upload queue][FINAL] {"max":916,"min":916,"avg":916,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":916}
+[info] ✔  hosting[hk-lite]: file upload complete 
+[debug] [2023-05-16T03:26:18.245Z] [hosting] deploy completed after 1369ms
+[debug] [2023-05-16T03:26:18.247Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "hk-lite"
+    },
+    "version": "projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff"
+  }
+]
+[info] i  hosting[hk-lite]: finalizing version... 
+[debug] [2023-05-16T03:26:18.249Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/e2b11a93439e02ff updateMask=status%2Cconfig
+[debug] [2023-05-16T03:26:18.249Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/e2b11a93439e02ff {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-05-16T03:26:18.662Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/e2b11a93439e02ff 200
+[debug] [2023-05-16T03:26:18.662Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/e2b11a93439e02ff {"name":"projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:26:19.813085Z","createUser":{"email":"info@habitkey.app"},"finalizeTime":"2023-05-16T03:26:21.890330Z","finalizeUser":{"email":"info@habitkey.app"}}
+[debug] [2023-05-16T03:26:18.662Z] [hosting] finalized version for hk-lite:[object Object]
+[info] ✔  hosting[hk-lite]: version finalized 
+[info] i  hosting[hk-lite]: releasing new version... 
+[debug] [2023-05-16T03:26:18.663Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases versionName=projects%2F699027761374%2Fsites%2Fhk-lite%2Fversions%2Fe2b11a93439e02ff
+[debug] [2023-05-16T03:26:18.663Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases {}
+[debug] [2023-05-16T03:26:19.102Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases 200
+[debug] [2023-05-16T03:26:19.102Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases {"name":"projects/699027761374/sites/hk-lite/channels/live/releases/1684207581767000","version":{"name":"projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:26:19.813085Z","createUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"},"finalizeTime":"2023-05-16T03:26:21.890330Z","finalizeUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}},"type":"DEPLOY","releaseTime":"2023-05-16T03:26:21.767Z","releaseUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}}
+[debug] [2023-05-16T03:26:19.102Z] [hosting] release: {"name":"projects/699027761374/sites/hk-lite/channels/live/releases/1684207581767000","version":{"name":"projects/699027761374/sites/hk-lite/versions/e2b11a93439e02ff","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:26:19.813085Z","createUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"},"finalizeTime":"2023-05-16T03:26:21.890330Z","finalizeUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}},"type":"DEPLOY","releaseTime":"2023-05-16T03:26:21.767Z","releaseUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}}
+[info] ✔  hosting[hk-lite]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/hk-lite/overview
+[info] Hosting URL: https://hk-lite.web.app
+[debug] [2023-05-16T03:28:36.425Z] Error: Timed out.
+    at Timeout._onTimeout (/root/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-16T03:44:55.810Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T03:44:55.811Z] Command:       /root/.nvm/versions/node/v18.16.0/bin/node /root/.nvm/versions/node/v18.16.0/bin/firebase deploy
+[debug] [2023-05-16T03:44:55.812Z] CLI Version:   12.0.0
+[debug] [2023-05-16T03:44:55.812Z] Platform:      linux
+[debug] [2023-05-16T03:44:55.812Z] Node Version:  v18.16.0
+[debug] [2023-05-16T03:44:55.812Z] Time:          Mon May 15 2023 20:44:55 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-05-16T03:44:55.812Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T03:44:55.873Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T03:44:55.874Z] > authorizing via signed-in user (info@habitkey.app)
+[debug] [2023-05-16T03:44:55.874Z] [iam] checking project hk-lite for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-16T03:44:55.876Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions [none]
+[debug] [2023-05-16T03:44:55.876Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions x-goog-quota-user=projects/hk-lite
+[debug] [2023-05-16T03:44:55.876Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-16T03:47:07.529Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/hk-lite:testIamPermissions
+[debug] [2023-05-16T03:47:07.531Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite [none]
+[debug] [2023-05-16T03:47:07.735Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite 200
+[debug] [2023-05-16T03:47:07.735Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hk-lite {"projectId":"hk-lite","projectNumber":"699027761374","displayName":"hk-lite","name":"projects/hk-lite","resources":{"hostingSite":"hk-lite"},"state":"ACTIVE","etag":"1_f794f549-4d85-4205-b682-78d696bc0680"}
+[info] 
+[info] === Deploying to 'hk-lite'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-05-16T03:47:07.742Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions [none]
+[debug] [2023-05-16T03:47:07.742Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-16T03:47:08.426Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions 200
+[debug] [2023-05-16T03:47:08.426Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions {"name":"projects/699027761374/sites/hk-lite/versions/70f61fb1892defde","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[hk-lite]: beginning deploy... 
+[info] i  hosting[hk-lite]: found 12 files in build 
+[debug] [2023-05-16T03:49:20.655Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-16T03:49:20.656Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2023-05-16T03:49:21.125Z] [hosting] hash cache [YnVpbGQ] stored for 12 files
+[debug] [2023-05-16T03:49:21.125Z] [hosting][hash queue][FINAL] {"max":463,"min":12,"avg":53.166666666666664,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":467}
+[debug] [2023-05-16T03:49:21.125Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/70f61fb1892defde:populateFiles [none]
+[debug] [2023-05-16T03:49:21.125Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/70f61fb1892defde:populateFiles {"files":{"/asset-manifest.json":"dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/css/main.91410daa.css":"d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e","/static/css/main.91410daa.css.map":"444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb","/static/js/main.215dec49.js.LICENSE.txt":"bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07","/static/js/main.215dec49.js":"245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c","/static/js/main.215dec49.js.map":"d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4"}}
+[debug] [2023-05-16T03:49:21.335Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/70f61fb1892defde:populateFiles 200
+[debug] [2023-05-16T03:49:21.336Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/699027761374/sites/hk-lite/versions/70f61fb1892defde:populateFiles {"uploadRequiredHashes":["d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e","444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb","d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4","bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07","245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c","0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b","dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files"}
+[debug] [2023-05-16T03:49:21.337Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:49:21.337Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:49:21.338Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb [none]
+[debug] [2023-05-16T03:49:21.338Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb [stream]
+[debug] [2023-05-16T03:49:21.339Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4 [none]
+[debug] [2023-05-16T03:49:21.339Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4 [stream]
+[debug] [2023-05-16T03:49:21.340Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [none]
+[debug] [2023-05-16T03:49:21.340Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [stream]
+[debug] [2023-05-16T03:49:21.341Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c [none]
+[debug] [2023-05-16T03:49:21.342Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c [stream]
+[debug] [2023-05-16T03:49:21.343Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b [none]
+[debug] [2023-05-16T03:49:21.343Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b [stream]
+[debug] [2023-05-16T03:49:21.344Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7 [none]
+[debug] [2023-05-16T03:49:21.344Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7 [stream]
+[debug] [2023-05-16T03:49:21.345Z] [hosting][populate queue][FINAL] {"max":213,"min":213,"avg":213,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":221}
+[debug] [2023-05-16T03:49:21.345Z] [hosting] uploads queued: 7
+[debug] [2023-05-16T03:49:22.035Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c 200
+[debug] [2023-05-16T03:49:22.035Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/245856d683caa09ef85e477d5e6cdffbb8f156d66e2d938b49dc63ed0fb41c9c [stream]
+[debug] [2023-05-16T03:49:22.190Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb 200
+[debug] [2023-05-16T03:49:22.190Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/444479a3e66147d9e9307207c8aa93fa86700e8b9d0092aede5d0c294a8fa6bb [stream]
+[debug] [2023-05-16T03:49:22.406Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4 200
+[debug] [2023-05-16T03:49:22.406Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d74b883d0dbb07d9d6c4070628ede18334b61bb60dd79a1d07b29cb0612fb5c4 [stream]
+[debug] [2023-05-16T03:49:22.577Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7 200
+[debug] [2023-05-16T03:49:22.577Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/dcf1a8fd1d1d86381e5d4bbefc206120d4ebec264acaf1bae9ae3da9486463b7 [stream]
+[debug] [2023-05-16T03:49:51.737Z] [uploadQueue] Retrying task d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e
+[debug] [2023-05-16T03:49:51.737Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:49:51.737Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:49:51.739Z] [uploadQueue] Retrying task bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07
+[debug] [2023-05-16T03:49:51.739Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [none]
+[debug] [2023-05-16T03:49:51.739Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [stream]
+[debug] [2023-05-16T03:49:51.741Z] [uploadQueue] Retrying task 0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b
+[debug] [2023-05-16T03:49:51.742Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b [none]
+[debug] [2023-05-16T03:49:51.742Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b [stream]
+[debug] [2023-05-16T03:49:52.554Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b 200
+[debug] [2023-05-16T03:49:52.554Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/0240f82d4ba5cf1f1877cdc1219c533c37def8ef70a9fae90594875cfbf5d45b [stream]
+[debug] [2023-05-16T03:50:22.536Z] [uploadQueue] Retrying task d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e
+[debug] [2023-05-16T03:50:22.537Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:50:22.537Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:50:22.539Z] [uploadQueue] Retrying task bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07
+[debug] [2023-05-16T03:50:22.539Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [none]
+[debug] [2023-05-16T03:50:22.540Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [stream]
+[debug] [2023-05-16T03:50:23.236Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 200
+[debug] [2023-05-16T03:50:23.236Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/bc566ab16b4433985f34f8a9fd78a8cb34556f78c3a4a901b158498c13d4ac07 [stream]
+[debug] [2023-05-16T03:50:54.137Z] [uploadQueue] Retrying task d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e
+[debug] [2023-05-16T03:50:54.138Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:50:54.138Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:51:27.339Z] [uploadQueue] Retrying task d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e
+[debug] [2023-05-16T03:51:27.340Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:51:27.340Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:52:03.740Z] [uploadQueue] Retrying task d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e
+[debug] [2023-05-16T03:52:03.740Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [none]
+[debug] [2023-05-16T03:52:03.740Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:52:04.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e 200
+[debug] [2023-05-16T03:52:04.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hk-lite/versions/70f61fb1892defde/files/d67f03a9b98594a42319c7cfcee2425b4e4bfb9bf77aa4eed0603572064b6e0e [stream]
+[debug] [2023-05-16T03:52:04.468Z] [hosting][upload queue][FINAL] {"max":1240,"min":697,"avg":871.5714285714286,"active":0,"complete":7,"success":7,"errored":0,"retried":8,"total":7,"elapsed":163131}
+[info] ✔  hosting[hk-lite]: file upload complete 
+[debug] [2023-05-16T03:52:04.468Z] [hosting] deploy completed after 163819ms
+[debug] [2023-05-16T03:52:04.469Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "hk-lite"
+    },
+    "version": "projects/699027761374/sites/hk-lite/versions/70f61fb1892defde"
+  }
+]
+[info] i  hosting[hk-lite]: finalizing version... 
+[debug] [2023-05-16T03:52:04.471Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/70f61fb1892defde updateMask=status%2Cconfig
+[debug] [2023-05-16T03:52:04.471Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/70f61fb1892defde {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-05-16T03:52:04.895Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/70f61fb1892defde 200
+[debug] [2023-05-16T03:52:04.895Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/versions/70f61fb1892defde {"name":"projects/699027761374/sites/hk-lite/versions/70f61fb1892defde","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:47:11.376874Z","createUser":{"email":"info@habitkey.app"},"finalizeTime":"2023-05-16T03:52:08.107408Z","finalizeUser":{"email":"info@habitkey.app"}}
+[debug] [2023-05-16T03:52:04.895Z] [hosting] finalized version for hk-lite:[object Object]
+[info] ✔  hosting[hk-lite]: version finalized 
+[info] i  hosting[hk-lite]: releasing new version... 
+[debug] [2023-05-16T03:52:04.896Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases versionName=projects%2F699027761374%2Fsites%2Fhk-lite%2Fversions%2F70f61fb1892defde
+[debug] [2023-05-16T03:52:04.896Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases {}
+[debug] [2023-05-16T03:52:05.326Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases 200
+[debug] [2023-05-16T03:52:05.326Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hk-lite/channels/live/releases {"name":"projects/699027761374/sites/hk-lite/channels/live/releases/1684209127994000","version":{"name":"projects/699027761374/sites/hk-lite/versions/70f61fb1892defde","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:47:11.376874Z","createUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"},"finalizeTime":"2023-05-16T03:52:08.107408Z","finalizeUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}},"type":"DEPLOY","releaseTime":"2023-05-16T03:52:07.994Z","releaseUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}}
+[debug] [2023-05-16T03:52:05.326Z] [hosting] release: {"name":"projects/699027761374/sites/hk-lite/channels/live/releases/1684209127994000","version":{"name":"projects/699027761374/sites/hk-lite/versions/70f61fb1892defde","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-05-16T03:47:11.376874Z","createUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"},"finalizeTime":"2023-05-16T03:52:08.107408Z","finalizeUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}},"type":"DEPLOY","releaseTime":"2023-05-16T03:52:07.994Z","releaseUser":{"email":"info@habitkey.app","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxbmAnlQCbicgNWvSLD08Vo779Q3Fy95I_vXqG0=mo"}}
+[info] ✔  hosting[hk-lite]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/hk-lite/overview
+[info] Hosting URL: https://hk-lite.web.app
+[debug] [2023-05-16T03:52:10.420Z] Error: Timed out.
+    at Timeout._onTimeout (/root/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.

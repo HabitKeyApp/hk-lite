@@ -1,0 +1,41 @@
+npx create-react-app hk-lite
+
+Following tutorial https://www.youtube.com/watch?v=PJCr_aoOv68
+
+follow tailwind.css installation instructions for react
+
+delete extra files in src folder
+
+clean up app.js and index.js to get rid of extra code
+
+add style for appContainer div
+
+Create components folder
+
+Create navbar compon
+Install JS JSX Snippets extension
+type rcc to create class component
+add navbar component to app.js
+
+
+npm install firebase
+npm install react-firebase-hooks
+npm i react-google-button
+
+create login and logout components
+create chat component
+
+Create firebase collection for messages
+
+END OF TUTORIAL. NOT ACTUALLY USING THE CHAT RIGHT NOW.
+
+Implement habit list using techniques from tutorial. Using material ui instead of tailwind.
+npm install @mui/material @emotion/react @emotion/styled
+
+Deploy to firebase
+npm install -g firebase-tools
+
+
+
+
+
